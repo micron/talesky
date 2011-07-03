@@ -28,8 +28,12 @@ int main(void){
 void skytaleEncode(){
 	char encodeMe[1000];
 	char * encodeMePtr;
+	char encodeProcess[16][16];
+	char encodedString[1000];
 	int range;
 	int len = 0;
+	int rangeCounter = 1;
+	int currentPos = 0;
 	
 	do {
 		if (len > 0){
@@ -45,9 +49,34 @@ void skytaleEncode(){
 		len = strlen(encodeMe);
 
 	} while(len < range);
+	
+	for(int i = 0 ; i < len ; i++){
+		encodeProcess[currentPos][rangeCounter] = encodeMe[i];
 
+		if(rangeCounter == range){
+			rangeCounter = 0;
+			currentPos++;
+		}
 
-	encodeMePtr = new char(len + 1);
+		rangeCounter++;
+	}
+	
+	system("cls");
 
-	strcpy(encodeMePtr, encodeMe);
+	for(int n = 1 ; n <= range ; n++){
+		for(int m = 0 ; m < 16; m++){
+			if(encodeProcess[m][n]){
+				cout << encodeProcess[m][n];
+			}
+			
+		}
+	}
+	
+	
+
+	
+	
+	//encodeMePtr = new char(len + 1);
+
+	//strcpy(encodeMePtr, encodeMe);
 }
