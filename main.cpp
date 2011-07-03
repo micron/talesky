@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void skytaleEncode();
+
 int main(void){
 	int selection;
 
@@ -21,4 +23,9 @@ int main(void){
 	}
 
 	return 0;
+}
+
+void skytaleEncode(){
+	char encodeMe[1000];
+	int range;
 }
