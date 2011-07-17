@@ -73,7 +73,7 @@ void skytaleEncode(){
 	}
 
 	if(useSwitch){
-		// baaah, ugly fix
+		// baaah, ugly fixx
 		for(int i = range ; i < len ; i = i + range){
 			skipValue = i;
 		}
